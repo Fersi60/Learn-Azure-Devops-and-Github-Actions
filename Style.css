@@ -1,0 +1,114 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+
+    /* Background image properties */
+    background-image: url('/img/background.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed; 
+}
+
+#container {
+    max-width: 900px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0);
+    padding: 120px;
+    border-radius: 10px;
+}
+
+#image-column {
+    flex: 1;
+    text-align: center;
+}
+
+#text-column {
+    flex: 1;
+    text-align: left;
+    padding: 20px;
+}
+
+img {
+    padding: 30px;
+    width: 330px;
+    height: 330px;
+    border-radius: 30%;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #0078d4;
+    color: #ffffff;
+    border-radius: 5px;
+    margin: 10px;
+}
+
+.social-media {
+    margin-top: 20px;
+}
+
+.social-media a {
+    display: inline-block;
+    margin: 5px;
+    color: #0078d4;
+    font-size: 20px;
+}
+
+/* Media Queries for responsiveness */
+
+/* Tablet (landscape and portrait) */
+@media only screen and (max-width: 768px) {
+    #container {
+        flex-direction: column; /* Stack the columns vertically on smaller screens */
+        padding: 60px;
+    }
+    
+    #image-column, #text-column {
+        flex: none;
+        width: 100%; /* Take full width of the screen */
+    }
+    
+    img {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+/* Mobile (portrait) */
+@media only screen and (max-width: 480px) {
+    body {
+        margin: 10px;
+    }
+    
+    #container {
+        padding: 40px;
+    }
+    
+    img {
+        width: 200px;
+        height: 200px;
+        padding: 20px;
+    }
+    
+    .button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+
+    #text-column {
+        text-align: center; /* Align text to center on mobile for better readability */
+    }
+}
